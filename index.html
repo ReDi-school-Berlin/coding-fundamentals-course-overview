@@ -1,0 +1,470 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+	body {
+  	 font-family: "Calibri Light", sans-serif;
+  	 line-height: 1.5;
+	}
+	nav header {
+ 	 font-size: 25px;
+  	 padding: 30px 15px 0px 15px;
+  	 color: rgb(17, 156, 171);
+	}
+	header {
+  	 font-size: 23px;
+ 	 font-weight: bold;
+	 font-family: "Calibri", sans-serif;
+	 color: rgb(17, 156, 171);
+	}
+	#navbar {
+ 	 position: fixed;
+	 min-width: 190px;
+	 top: 0px;
+ 	 left: 0px;
+  	 width: 180px;
+   	 height: 100%;
+	 border-right: 2.5px solid;
+	 border-color: rgb(17, 156, 171);
+	}
+	#navbar ul {
+  	 height: 79%;
+ 	 padding: 0;
+ 	 overflow-x: hidden;
+	}
+	#navbar li {
+	  color: rgb(17, 156, 171);
+	  border-top: 1px solid;
+	  list-style: none;
+	  position: relative;
+	  width: 100%;
+	}
+	#navbar a {
+	  display: block;
+	  padding: 8px 15px;
+	  color: rgb(103, 183, 181);
+	  font-weight: bold;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+	#navbar a:hover {
+	  background-color: rgb(103, 169, 189);
+	  color: white;
+	}
+	#main-doc {
+	  position: absolute;
+	  margin-left: 200px;
+	  max-width: 700px;	
+	  padding: 25px;
+	}
+	#main-doc li {
+	  margin-left: -20px;
+	  padding-left: 5px;
+	}
+	section {
+	  padding-top: 30px;
+	}
+	code {
+	  display: block;
+	  text-align: left;
+	  white-space: pre-line;
+	  position: relative;
+	  word-break: normal;
+	  word-wrap: normal;
+	  line-height: 1.5;
+	  background-color: rgb(103, 183, 181);
+	  padding: 15px;
+	  margin: 10px;
+	  border-radius: 10px;
+	  max-width: 600px;
+	}
+	a {
+	  text-decoration: underlined;
+	  color: rgb(17, 156, 171);
+	}
+	@media only screen and (max-width: 500px) {
+	  #navbar ul {
+	    border: 2px solid rgb(103, 183, 181);
+	    height: 150px;
+	  }
+	  #navbar {
+	    position: absolute;
+	    width: 100%;
+	    max-height: 220px;
+	  }
+	  #main-doc {
+	    position: relative;
+	    margin-left: 0px;
+	    margin-top: 210px;
+	  }
+	}
+  </style>
+</head>
+<body>
+<nav id="navbar">
+  <header>Python Coding Fundamentals</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#Variables">Variables</a></li>
+    <li><a class="nav-link" href="#Operators">Operators</a></li>
+    <li><a class="nav-link" href="#Conditions">Conditions</a></li>
+    <li><a class="nav-link" href="#Loops">Loops</a></li>
+    <li><a class="nav-link" href="#Functions">Functions</a></li>
+    <li><a class="nav-link" href="#Formatting_Code">Formatting Code</a></li>
+    <li><a class="nav-link" href="#Lists">Lists</a></li>
+    <li><a class="nav-link" href="#Dictionaries">Dictionaries</a></li>
+    <li><a class="nav-link" href="#Tuples">Tuples</a></li>
+    <li><a class="nav-link" href="#Sets">Sets</a></li>
+    <li><a class="nav-link" href="#Glossary">Glossary</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <p>Python is a high-level, general purpose programming language with serveral advantages:
+    <ul>
+      <li>Simple syntax → easy to learn & quick to write in</li>
+      <li>Versatile</li>
+      <li>Beginner friendly</li>
+      <li>Open source → free to use and distribute</li>
+      <li>Lot of code already written that can be reused (modules & libraries)</li>
+      <li>Large and active community</li>
+    </ul>
+    </p>
+  </section>
+
+  <section class="main-section" id="Variables">
+    <header>Variables</header>
+    <p>Variables are containers for storing data. A variable is created when you assign a value to the name of a variable (e.g. year = 2021). You can change the value of variables later on.</p>
+    <p>The naming convention for variables in Python is that all variables should be written in "lower_snake_case" (all letters in lowercase and words separated by an underscore) and that they cannot start with a number (but they can contain numbers).</p>
+    <p>There are different <b>types of variables</b>:<br><br>
+      <b>Integer</b> (whole numbers): You can create integers just by typing a number:<br>
+      <code>my_favourite_number = 4 </code><b>Float</b> (decimal numbers): Use a dot for the decimal point:<code>value_of_pi = 3.14</code><b>String</b> (words or sentences): You need to wrap strings either with single or double quotes. It doesn’t matter which one you use, just be consistent!<code>school = 'ReDi'
+        course = 'Intro to Programming'
+        motto = "Don't worry, be happy!"</code>As you can see in the last example above, you might have to combine double and single quotes in a single string: If you need a single quote inside the string use double quotes to wrap it - and vice versa.
+    </p>
+    <p>You can create multi-line strings with three double or three single quotes.<code>'''This is a multi-line string and you can use
+        either single or double quotation signs to wrap it.
+        It's up to you!'''</code>
+      <b>Boolean</b> (True or False): This variable type represents one of two values: "True" or "False". Booleans have to be written with capital first letters ("True", not "true"). You can assign a Boolean value to a variable.<code>is_redi_school_awesome = True
+        print(is_redi_school_awesome)&nbsp;&nbsp;→ will print True
+      </code>Furthermore, when you compare two values, the expression is evaluated and Python returns the Boolean answer:<code>print(10 == 10)&nbsp;&nbsp;→ True
+        print(30 != 30)&nbsp;&nbsp;→ False
+        print('a' == 'a')&nbsp;&nbsp;→ True
+        print('a' == 'b')&nbsp;&nbsp;→ False</code>
+    </p>
+    <p>You can check which data type is given by using the type-function and you can also converse one data type into another:<code>print(type(True))&nbsp;&nbsp;→ class 'bool'
+      print(type(5 &gt; 3))&nbsp;&nbsp;→ class 'bool'
+        print(bool(0))&nbsp;&nbsp;→ False
+        print(bool(1))&nbsp;&nbsp;→ True
+
+        float("5.2")&nbsp;&nbsp;→ turning string into float
+        int("8")&nbsp;&nbsp;→ turning string into integer
+        int(9.2)&nbsp;&nbsp;→ turning float into integer
+        str(3.14)&nbsp;&nbsp;→ turning float into string</code></p>
+  </section>
+
+  <section class="main-section" id="Operators">
+    <header>Operators</header>
+    <p>Operators are used to perform operations on variables and values.</p>
+    <p><b>Arithmetic Operators</b> perform common mathematical operations:<code>5 + 5&nbsp;&nbsp;→ Addition
+        150 - 492&nbsp;&nbsp;→ Subtraction
+        5 * 4&nbsp;&nbsp;→ Multiplication
+        80 / 4&nbsp;&nbsp;→ Division</code>
+      Additionally:<code>5 ** 5&nbsp;&nbsp;→ exponent (raise to power)
+      20 % 3&nbsp;&nbsp;→ modulo (remainder of division)</code></p>
+      <p><b>Assignment Operators</b> assign values to variables:<code>var = 5&nbsp;&nbsp;→ assign
+        var += 5&nbsp;&nbsp;→ add and assign
+        var -= 5&nbsp;&nbsp;→ subtract and assign
+        var *= 5&nbsp;&nbsp;→ multiply and assign
+        var /= 5&nbsp;&nbsp;→ divide and assign</code></p>
+     <p><b>Comparision Operators</b> compare values, sometimes they are called relational operators. Please note: you need TWO equal signs to make a comparision; a single equal sign is used to assign a value to a variable.<code>10 == 10&nbsp;&nbsp;→ equal to
+        30 != 31&nbsp;&nbsp;→ not equal to
+        5 &lt; 90&nbsp;&nbsp;→ less than
+      45 &lt;=46&nbsp;&nbsp;→ less than or equal to
+      89 &gt; 67&nbsp;&nbsp;→ greater than
+       65 &gt;= 34&nbsp;&nbsp;→ greater than or equal to</code></p>
+      <p><b>Identity Operators</b> compare the objects, not if they are equal but if they are actually the same object with the same memory location. "var1 is var2" returns True if both variables are the very same object and "var1 is not var2" returns True if both variables are different objects. Example:<code>x = ["apple", "banana"]
+        y = ["apple", "banana"]
+        z = x
+
+        print(x is z) → True: x is the same object as z
+        print(x is y) → False: x is not the same object as y, even if they have the same value
+        print(x == y) → True: x is equal to y. This is the difference between the operators "is" and "==".</code></p>
+      <p><b>Logical Operators</b> (and/or/not) are used to combine conditional statements:<code>x &gt; 5 and x &lt; 10 → returns True if both statements are true
+      x &lt; 5 or x &lt; 4 → returns True if one of the statements is true
+      not(x &gt; 5 and x &lt; 10) → reverses the result as it returns False if the result of the statement inside the brackets is True</code></p>
+  </section>
+
+  <section class="main-section" id="Conditions">
+    <header>Conditions</header>
+    <p>Conditional statements check the value of an expression and provide different actions based on its outcome:
+    <ul>
+      <li><b>if</b> determines the execution of code depending on the evaluation of a boolean expression. Is this given condition satisfied: Yes or No? If Yes do this.</li>
+      <li><b>elif</b> allows for continued checks to be performed after the initial "if"-statement. You can add as many elif-statements as you want. Is maybe this condition satisfied? Yes or No? If Yes do this.</li>
+      <li><b>else</b> provides an alternative code to be executed when the previous "if"-statement&nbsp;&nbsp;&nbsp;- and all other optional elif-statements&nbsp;&nbsp;- evaluate to "False".</li>
+    </ul>Pay attention to the colon and indentation in the next line following each condition:
+    <code>if occupation == "government employee":
+      &nbsp;&nbsp;print("You can apply for benefits.")
+      elif occupation == "entrepreneur":
+      &nbsp;&nbsp;print("You make sure you pay your tax!")
+      else:
+      &nbsp;&nbsp;print("This facility is only for government employees!")</code>You can combine different conditional statements or even insert further conditions inside a given if-/elif-statement:<code>if occupation == "government employee" and number_of_children &gt; 0:
+      &nbsp;&nbsp;if number_of_children == 3:
+      &nbsp;&nbsp;&nbsp;&nbsp;print("You can only claim benefits for up to two children.")
+      elif occupation == "entrepreneur":
+      print("You make sure you pay your tax!")
+      else:
+      print("This facility is only for government employees!")</code>
+    </p>
+  </section>
+
+  <section class="main-section" id="Loops">
+    <header>Loops</header>
+    <p>Loops iterate over a given sequence repeatedly until a given condition is satisfied.</p>
+    <p><b>For Loop</b><br>A For Loop iterates over the individual elements of the objects you feed it. Its syntax is structured as follows: "for variable in iterable: do something with variable"<code>for letter in 'hello':
+        &nbsp;&nbsp;print(letter)
+
+        for i in 'hello':
+        &nbsp;&nbsp;print(i)</code>As you can see above, it does not matter how you call the respective variable; both "letter" and "i" work.</p>
+    <p>You can use a for-loop also with the <b>range-function</b> in order do iterate over a certain range of numbers. You always need to provide a limit to the range (starting point is automatically 0) but you can optionally also define an alternative start and also a step: range(start, stop, steps). Please note: the given ending number is excluded.<code>for i in range(1, 100):
+        &nbsp;&nbsp;print(i)&nbsp;&nbsp;→ printing numbers from 1 to 99
+
+        for i in range(10, 0, -1):
+        &nbsp;&nbsp;print(i)&nbsp;&nbsp;→ printing numbers from 10 to 1, decreasing
+
+        for i in range(10, 0, -2):
+        &nbsp;&nbsp;print(i)&nbsp;&nbsp;→ printing every second number from 10 to 2, decreasing</code>
+
+      You can nest a loop inside another loop. For each iteration of the outer loop the inner loop re-starts and completes its execution before the outer loop can continue to its next iteration.<code>for i in range(1,6):
+        &nbsp;&nbsp;for j in range(0,i):
+        &nbsp;&nbsp;&nbsp;&nbsp;print("*", end=' ')
+        &nbsp;&nbsp;print(" ")
+
+        *
+        * *
+        * * *
+        * * * *
+        * * * * *</code></p>
+
+    <p><b>While Loop</b><br> As long as the expression that follows a while statement evaluates to True, the block inside the while-loop will be executed repeatedly. In this example only odd numbers below 100 are printed (the loop will break as soon as the variable number is equal to 100 and the statement evaluates to False):<code>number = 0<br>
+        while number &lt; 100:
+      &nbsp;&nbsp;if number % 2 !=0:
+      &nbsp;&nbsp;&nbsp;&nbsp;print(my_number)
+      &nbsp;&nbsp;&nbsp;&nbsp;number +=1</code>You can create an infinite loop as follows:<code>while True:</code>Helpful commands or "magic words" for loops are:<ul>
+            <li><b>break</b>: causes a break out of the respective loop</li>
+            <li><b>continue</b>: to start with the next iteration (at the very beginning of the loop)</li>
+            <li><b>pass</b>: will not do anything&nbsp;&nbsp;- which is helpful while coding a loop and trying to run it without errors even if some conditions are not yet specified.</li>
+          </ul>
+    </p>
+  </section>
+
+  <section class="main-section" id="Functions">
+    <header>Functions</header>
+    <p>A function is a block of code that runs when it’s called. Functions are helpful to reduce duplicate code as they are reusable and they make code easier to read.</p>
+    <p><b>Syntax</b>: The word "def" lets python know, you are about to define a function. The function_name uniquely identifies the function and is followed by a pair of parentheses and a colon "():". The function body itself is written below with indentation.<code>def function_name():
+        &nbsp;&nbsp;indented function body
+        &nbsp;&nbsp;indented function body
+
+        function_name()&nbsp;&nbsp;→ to call the function type the function name followed by parenthesis</code></p>
+    <p>You can optionally pass certain data, called parameters, into a function. Parameters are specified after the function name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.<code>def multiple_of_five(num):
+        &nbsp;&nbsp;if num % 5 == 0:
+        &nbsp;&nbsp; &nbsp;&nbsp;print(f"{num} is a multiple of five.")
+        &nbsp;&nbsp;else:
+        &nbsp;&nbsp; &nbsp;&nbsp;print(f"{num} is not a multiple of five.")
+
+        multiple_of_five(45) &nbsp;&nbsp;→ calling the function with the argument 45 (value of parameter num)</code></p>
+    <p>The Python interpreter has a number of <a href="https://www.w3schools.com/python/python_ref_functions.asp" target="_blank" id="function_list">built-in functions</a>; only some of them will be presented throughout this website, e.g.:</p>
+    <p><b>len()</b> gives the length of an object or a collection of data (works with lists and strings).<code>print(len("hello"))&nbsp;&nbsp;→ 5</code></p>
+    <p>Another possibility is to <b>import functions</b>: You can either import a whole module using "modul.function()" to call the respective function:<code>import random
+
+        print(random.randint(0,100))
+        print(random.random())</code>Or you can import only the function you need from a module using directly function() to call it afterwards&nbsp;&nbsp;- use a comma when importing various functions simultaneoulsy:<code>from random import randrange,choices
+
+        print(randrange(2,21,2))&nbsp;&nbsp;→ returns a random number between 2 and 20, skipping the odd numbers (sytax: randrange(start, stop, step))
+
+        list = [0, 1]
+        print(choices(list, weights=(25, 75), k=1))&nbsp;&nbsp;→ returns 0 or 1 but with the probablity of 1:3 (k is optional: you can choose how many random outputs you want returned)</code></p>
+  </section>
+
+  <section class="main-section" id="Formatting_Code">
+    <header>Formatting Code</header>
+    <p><b>Commenting code</b> means adding descriptions of how pieces of your code works. You can add a single-line comment with the hash symbol # or a multi-line comment wrapped in triple-quotes '''. Lines which are thus 'commented out' are ignored by Python.<code># This is a comment in Python</code></p>
+    <p><b>Linebreaks inside a print statement</b> can be created with adding \n. Please note: You have to include this inside the quotation signs.<code>input("Choose a level of difficulty:\n 1) easy\n 2) medium\n 3) difficult\n")
+
+        Choose a level of difficulty:
+        1) easy
+        2) medium
+        3) difficult</code></p>
+    <p><b>Concatenating strings</b>: You can concatenate strings with variables using a plus or a comma. Please note: a comma will always add a space in the output. And if the variable is a float or an integer you have to convert the variable to a string first.<code>language = 'Python'
+        times = 4
+        print("I am learning "+language,str(times),"times a week.")
+        → I am learning Python 4 times a week.</code></p>
+    <p>You can <b>separate text</b> in the terminal by adding empty lines using print() with empty brackets. But you can also define how to separate words, letters and general output using "sep" which inserts a string between values (by default a space) or "end" which appends a string after the last value (by default a new line):<code>for i in range(2):
+        &nbsp;&nbsp;for j in range(2):
+        &nbsp;&nbsp;&nbsp;&nbsp;print("*")
+
+        → *
+        &nbsp;&nbsp;*
+        &nbsp;&nbsp;*
+        &nbsp;&nbsp;*
+
+        for i in range(2):
+        &nbsp;&nbsp;for j in range(2):
+        &nbsp;&nbsp;&nbsp;&nbsp;print("*", end="")
+
+        → ****
+
+        for i in range(2):
+        &nbsp;&nbsp;for j in range(2):
+        &nbsp;&nbsp;&nbsp;&nbsp;print("*", end=" ")
+        &nbsp;&nbsp;print()
+
+        → * *
+        &nbsp;&nbsp;* *</code></p>
+    <p><b>F-strings</b> help you add variables to strings in a quick manner. There are three different methods to format strings: Using %, str.format() or f-string. Remember to use different quotes if the string itself also contains quotes otherwise you will get an error.<code>name = "Tim"
+        occupation = "gardener"
+
+        print(f"Hi I am {name} and I am a {occupation}.")
+        print("Hi I am {} and I am a {}.".format(name, occupation))
+        print("Hi I am {1} and I am a {0}.".format(occupation, name))
+        print("Hi I am %s and I am a %s." %(name, occupation))
+
+        &nbsp;&nbsp;→ Hi I am Tim and I am a gardener.</code></p>
+    <p>You can use ANSI code style to make your text more readable and creative. Please note: It highly depends on the type of terminal you are using. To print <b>coloured or bold text</b> in the terminal with ANSI escape codes:<code>The format is:
+        &nbsp;&nbsp;\033[ = Escape code
+        &nbsp;&nbsp;32 = Text colour (32 for Yellow; 91 for Red; 95 for Purple)
+        &nbsp;&nbsp;\033[00m = ending formular
+        &nbsp;&nbsp;- Do not forget the quotation signs! -
+
+        print("\033[91m This text is printed in Red.\033[00m")
+        print("\033[95m This text is printed in Purple.\033[00m")
+        print("\033[32m This text is Yellow.\033[00m")
+        print("\033[1m"+"This text is bold."+"\033[0m")</code></p>
+    <p>Python provides a number of <a href="https://www.w3schools.com/python/python_strings_methods.asp" target="_blank" id="function_list_2">built-in methods</a> to modify strings; e.g. count() returns the number of times a specified value occurs in a string; islower() returns True if all characters in the string are lower case and lower() converts a string into lower case. You can also <b>split strings</b>:<code>string = "John"
+        splitted_string = string.split('o')&nbsp;&nbsp;→ you can choose whichever marker you want
+        print(splitted_string)&nbsp;&nbsp;→ ['J', 'hn']</code></p>
+  </section>
+
+  <section class="main-section" id="Lists">
+    <header>Lists</header>
+    <p>Lists represent a collection of elements which can be of different data types. Other programming languages might refer to them as arrays. You can create a list in Python in just the same way as any other variable: by giving it a name and assigning it a value.</p>
+    <p>Lists are ORDERED and INDEXED, they can contain DUPLICATES and they are MUTABLE.<code>animals = ['cat', 'dog', 'fish', 'bison']&nbsp;&nbsp;→ a list of strings
+        numbers = [1, 7, 34, 20, 12]&nbsp;&nbsp;→ a list of integers
+        my_list = []&nbsp;&nbsp;→ an empty list
+        nested_list = [[1, 7, 34], ['cat', 'dog', 'fish'], [orange, blue, red]]&nbsp;&nbsp;→ a list of lists</code>
+      Each element inside a list has an index, starting from 0:<code>cities = ['Berlin', 'Munich', 'Paris']
+        index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;2</code>The city on the position 0 is Berlin, on position 1 there is Munich and on position 2 there’s Paris.</p>
+    <p><b>How to work with lists using <a href="https://www.w3schools.com/python/python_lists_methods.asp" target="_blank" id="function_list_3">built-in methods</a></b>:<br>To access or <b>find</b> an element by its index use square brackets containing the index:<code>cities[1]&nbsp;&nbsp;→ Munich
+        nested_list[1][1]&nbsp;&nbsp;→ dog</code>To find on the other hand the index of a certain element use the index-method: "list.index(value)". Please note: If the value appears more than once, you will only get the index of the first one and you'll get an error if the value is not included in the list.<code>cities.index("Munich")&nbsp;&nbsp;→ 1</code></p>
+    <p>To <b>insert</b> a value at a particular position of a list use the insert-method: "list.insert(index, value)":<code>numbers.insert(0, 45)&nbsp;&nbsp;→ to insert 45 at the beginning of the list of numbers</code></p>
+
+    <p>To <b>add</b> a value at the end of a list use the append-method:<code>citites_to_visit = []
+        citites_to_visit.append('New York')
+        citites_to_visit.append('Tokio')
+        citites_to_visit.append('Copenhagen')
+        print(citites_to_visit)&nbsp;&nbsp;→ ['New York', 'Tokio', 'Copenhagen']
+      </code></p>
+    <p>To <b>remove</b> an element use the method with "list.remove(value)". Please note: if the value appears more than once, only the first one will be removed. The delete-method on the other hand needs to be fed with the index number instead of the value itself:<code>cities_to_visit.remove("Tokio")
+        del cities_to_visit[0]
+        print(citites_to_visit)&nbsp;&nbsp;→ ['Copenhagen']</code></p>
+    <p>To <b>sort</b> a list of strings alphabetically or a list of numbers in ascending order you can use the following method:<code>my_list = [5, 2, 30, 10, 4, 12, 46]
+        my_list.sort()
+        → [2, 4, 5, 10, 12, 30, 46]</code></p>
+    <p>To <b>reverse</b> a list of items:<code>my_list.reverse()
+        print(my_list)&nbsp;&nbsp;→ [46, 30, 12, 10, 5, 4, 2]</code></p>
+    <p>To <b>slice an index</b> means to access or to operate a certain action only on a fragment of a list. It follows the syntax of "list[starting index : ending index : slicing step]". The ending index is always excluded though. To access items from index [2] to index [3] in a list, you have to slice "list[2:4]". The slicing step is optional and automatically set to 1.<code>my_list = [2, 4, 5, 10, 12, 30, 46]
+        my_list[:]&nbsp;&nbsp;→ [2, 4, 5, 10, 12, 30, 46] all items
+        my_list[2:4]&nbsp;&nbsp;→ [5, 10] items with index [2] and [3]
+        my_list[-5:-2]&nbsp;&nbsp;→ [5, 10, 12] begins at the fifth and stops at the third item counting down from the end of the list (excluding the penultimate item)<br>
+        my_list[:2]&nbsp;&nbsp;→ [2, 4] first two items
+        my_list[3:]&nbsp;&nbsp;→ [10, 12, 30, 46] all items starting with the fourth (remember: the first item's index is 0)<br>
+        my_list[2:7:2]&nbsp;&nbsp;→ [5, 12, 46] every second item, starting with the third and ending at index [6]<br>
+        my_list[:-1]&nbsp;&nbsp;→ [46] last item
+        my_list[::-1]&nbsp;&nbsp;→ [46, 30, 12, 10, 5, 4, 2] list in reverse order
+      </code></p>
+  </section>
+
+  <section class="main-section" id="Dictionaries">
+    <header>Dictionaries</header>
+    <p>A dictionary is also a collection of items but with each element representing a unique "key : value pair". Dictionaries are ordered and indexed (but only since Python version 3.7) and they are MUTABLE, which means that the stored data can be changed later on. You have to use a coma to seperate each data pair and curly brackets to wrap the whole thing.</p>
+    <p><b>Please note</b>: Dictionaries cannot contain duplicate key values.<code>thisdict = {
+        &nbsp;&nbsp;&nbsp;&nbsp;"brand": "Ford",
+        &nbsp;&nbsp;&nbsp;&nbsp;"model": "Mustang",
+        &nbsp;&nbsp;&nbsp;&nbsp;"year": 1964,
+        &nbsp;&nbsp;&nbsp;&nbsp;"year": 2020 &nbsp;&nbsp;→ this line overwrites the previous one using the same key
+        }</code></p>
+    <p><b>How to work with dictionaries using <a href="https://www.w3schools.com/python/python_dictionaries_methods.asp" target="_blank" id="function_list_4">built-in methods</a>:</b><br>With a loop you can iterate through all items inside a dictionary. Take for example one where key is a person's name and the corresponding value is the person's phone number&nbsp;&nbsp;- resulting in "name : phone number pairs". With the <b>items-method</b> you can access the keys and the corresponding value individually:<code>phonebook = {
+        &nbsp;&nbsp;&nbsp;&nbsp;"John" : 938477566,
+        &nbsp;&nbsp;&nbsp;&nbsp;"Jack" : 938377264
+        }
+
+        for name, number in phonebook.items():
+        &nbsp;&nbsp;print("Phone number of " + name + " is " + str(number))
+
+        → Phone number of John is 938477566
+        → Phone number of Jack is 938377264</code>
+      To see all <b>keys</b> of a dictionary as a list use the keys-method:<code>print(phonebook.keys())
+        → ['John', 'Jack']</code>
+      To see all corresponding <b>values</b> of a dictionary as a list use "dictionary.values()". And to only get the value of a specific key use the get-method with "dictionary.get(key)":<code>print(phonebook.values())
+        → [938477566, 938377264]
+
+        print(phonebook.get("John")
+        → 938477566</code>
+      To <b>remove</b> a certain key:value-pair from a dictionary use "dictionary.pop(key)" or delete as in "del dictionary[key]". To remove all elements from a dictionary use "dictionary.clear()".<code>del phonebook['John']</code></p>
+  </section>
+
+  <section class="main-section" id="Tuples">
+    <header>Tuples</header>
+    <p>Python has another sequence type which is called tuple. Once a tuple is created, you cannot change its values, it is IMMUTABLE. We define a tuple by putting a comma-separated list of values inside round brackets: "tuple = (value, value, value)"
+      <code>weekdays = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
+
+        mixed_data = ("Orange", [10, 20, 30], (5, 15, 25))&nbsp;&nbsp;→ items can be of different data types
+
+        print(mixed_data[1][1])&nbsp;&nbsp;→ 20
+      </code>
+      To let Python know that you want to create a tuple with just a single value you have to add a trailing comma:<code>print((3,)) NOT print((3))</code>
+    </p>
+    <p><b>How to work with tuples using built-in methods:</b><br>
+      To access a single element use "tuple[index]":<code>print(weekdays[0]) &nbsp;&nbsp;→ Monday
+        print(weekdays[-1]) &nbsp;&nbsp;→ Sunday</code>
+      You can also count values or look up an index inside a tuple:<code>print(weekdays.count('Monday')) &nbsp;&nbsp;→ 1
+        print(weekdays.index('Wednesday'))&nbsp;&nbsp;→ 2
+        print(len(mixed_data))&nbsp;&nbsp;→ 3</code> And you can even join tuples: tuple3 = tuple1 + tuple2<code>joined_tuple = weekdays + mixed_data
+
+        print(joined_tuple)
+        → ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Orange', [10, 20, 30], (5, 15, 25))</code></p>
+    <p>You CANNOT assign, insert or append a new value because a tuple is immutable. There is a workaround though: First you convert the tuple into a list, then change the list, and convert the list back into a tuple.<code>x = ("apple", "banana", "cherry")
+        y = list(x)
+        y[1] = "kiwi"
+        x = tuple(y)
+        print(x)&nbsp;&nbsp;→ ('apple', 'kiwi', 'cherry')</code></p>
+  </section>
+
+  <section class="main-section" id="Sets">
+    <header>Sets</header>
+    <p>A "Set" is another sequence data type in Python written with curly brackets. Set items are also immutable - except for removal and addition. They are unordered, therefore the items can appear in a different order every time. A set cannot accept identical items (like a dictionary) and items cannot be referred to by index or key.</p>
+  </section>
+
+  <section class="main-section" id="Glossary">
+    <header>Glossary</header>
+    <p>
+    <ul>
+      <li>Operator&nbsp;&nbsp;- used to perform operations on variables and values</li>
+      <li>Iteration&nbsp;&nbsp;- the repetition of a process</li>
+      <li>Iterable&nbsp;&nbsp;- an object that includes zero, one or many elements</li>
+      <li>Iterator&nbsp;&nbsp;- an object that contains a countable number of values</li>
+      <li>Syntax&nbsp;&nbsp;- the structure of a statement in a computer language</li>
+    </ul>
+    </p>
+  </section>
+
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <p>ReDi School Lesson 1-11</p>
+  </section>
+</main>
+
+</body>
+</html>
