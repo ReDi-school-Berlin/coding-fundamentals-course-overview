@@ -121,6 +121,7 @@
 </nav>
 <main id="main-doc">
   <section class="main-section" id="Introduction">
+    <h5>This site was created by: <a href="https://github.com/Rowe32" target="_blank"> @Rowe32 (ex ReDi student)</a></h2>
     <header>Introduction</header>
     <p>Python is a high-level, general purpose programming language with serveral advantages:
     <ul>
@@ -147,7 +148,7 @@
     <p>You can create multi-line strings with three double or three single quotes.<code>'''This is a multi-line string and you can use
         either single or double quotation signs to wrap it.
         It's up to you!'''</code>
-      <b>Boolean</b> (True or False): This variable type represents one of two values: "True" or "False". Booleans have to be written with capital first letters ("True", not "true"). You can assign a Boolean value to a variable.<code>is_redi_school_awesome = True
+      <b>Boolean</b> (True or False): This variable type represents one of two values: <code>True</code> or <code>False</code> Booleans have to be written with capital first letters (True, not true). You can assign a Boolean value to a variable.<code>is_redi_school_awesome = True
         print(is_redi_school_awesome)&nbsp;&nbsp;→ will print True
       </code>Furthermore, when you compare two values, the expression is evaluated and Python returns the Boolean answer:<code>print(10 == 10)&nbsp;&nbsp;→ True
         print(30 != 30)&nbsp;&nbsp;→ False
@@ -179,7 +180,7 @@
         var -= 5&nbsp;&nbsp;→ subtract and assign
         var *= 5&nbsp;&nbsp;→ multiply and assign
         var /= 5&nbsp;&nbsp;→ divide and assign</code></p>
-     <p><b>Comparision Operators</b> compare values, sometimes they are called relational operators. Please note: you need TWO equal signs to make a comparision; a single equal sign is used to assign a value to a variable.<code>10 == 10&nbsp;&nbsp;→ equal to
+     <p><b>Comparison Operators</b> compare values, sometimes they are called relational operators. Please note: you need TWO equal signs to make a comparision; a single equal sign is used to assign a value to a variable.<code>10 == 10&nbsp;&nbsp;→ equal to
         30 != 31&nbsp;&nbsp;→ not equal to
         5 &lt; 90&nbsp;&nbsp;→ less than
       45 &lt;=46&nbsp;&nbsp;→ less than or equal to
@@ -203,7 +204,7 @@
     <ul>
       <li><b>if</b> determines the execution of code depending on the evaluation of a boolean expression. Is this given condition satisfied: Yes or No? If Yes do this.</li>
       <li><b>elif</b> allows for continued checks to be performed after the initial "if"-statement. You can add as many elif-statements as you want. Is maybe this condition satisfied? Yes or No? If Yes do this.</li>
-      <li><b>else</b> provides an alternative code to be executed when the previous "if"-statement&nbsp;&nbsp;&nbsp;- and all other optional elif-statements&nbsp;&nbsp;- evaluate to "False".</li>
+      <li><b>else</b> provides an alternative code to be executed when the previous "if"-statement&nbsp;&nbsp;&nbsp;- and all other optional elif-statements&nbsp;&nbsp;- evaluate to False.</li>
     </ul>Pay attention to the colon and indentation in the next line following each condition:
     <code>if occupation == "government employee":
       &nbsp;&nbsp;print("You can apply for benefits.")
@@ -214,9 +215,9 @@
       &nbsp;&nbsp;if number_of_children == 3:
       &nbsp;&nbsp;&nbsp;&nbsp;print("You can only claim benefits for up to two children.")
       elif occupation == "entrepreneur":
-      print("You make sure you pay your tax!")
+      &nbsp;&nbsp;print("You make sure you pay your tax!")
       else:
-      print("This facility is only for government employees!")</code>
+      &nbsp;&nbsp;print("This facility is only for government employees!")</code>
     </p>
   </section>
 
@@ -388,8 +389,8 @@
 
   <section class="main-section" id="Dictionaries">
     <header>Dictionaries</header>
-    <p>A dictionary is also a collection of items but with each element representing a unique "key : value pair". Dictionaries are ordered and indexed (but only since Python version 3.7) and they are MUTABLE, which means that the stored data can be changed later on. You have to use a coma to seperate each data pair and curly brackets to wrap the whole thing.</p>
-    <p><b>Please note</b>: Dictionaries cannot contain duplicate key values.<code>thisdict = {
+    <p>A dictionary is also a collection of items but with each element representing a unique "key: value" pair. Dictionaries are ordered and indexed (but only since Python version 3.7) and they are MUTABLE, which means that the stored data can be changed later on. You have to use a coma to seperate each data pair and curly brackets to wrap the whole thing.</p>
+    <p><b>Please note</b>: Dictionaries cannot contain duplicate key values.<code>my_dict = {
         &nbsp;&nbsp;&nbsp;&nbsp;"brand": "Ford",
         &nbsp;&nbsp;&nbsp;&nbsp;"model": "Mustang",
         &nbsp;&nbsp;&nbsp;&nbsp;"year": 1964,
